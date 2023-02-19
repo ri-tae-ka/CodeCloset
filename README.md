@@ -1,5 +1,12 @@
 ## **CodeCloset**
 
+### Built Using:
+#### Frontend: <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"></img> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+#### Backend: <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></img> <img arc="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"></img>
+#### Database: <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"></img>
+#### Linter: <img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E"></img>
+#### Built Using: <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></img>
+
 #### _**IMPORTANT NOTE**_ -
 
 This project does not have a mongoDB connection setup. Setup the connection based on the environments below.
