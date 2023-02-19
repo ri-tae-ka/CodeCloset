@@ -1,0 +1,27 @@
+h1 {
+  color: black;
+}
+
+a {
+  color: green;
+}
+
+h3 {
+  color: black;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+.design {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.single {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px 50px;
+}

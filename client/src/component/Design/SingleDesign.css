@@ -1,0 +1,28 @@
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid green;
+}
+
+.design-topic {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 10%;
+    height: 45px;
+}
+
+.design-topic > h3{
+    margin: 0;
+    color: green;
+}
+
+.design-topic > p {
+    margin: 0;
+}
+
+.copy-button {
+    width: 15%;
+    margin-left: 85%;
+    border: 1px solid green;
+}
