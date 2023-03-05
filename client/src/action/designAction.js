@@ -9,6 +9,9 @@ import {
   SINGLE_DESIGN_FAIl,
   SINGLE_DESIGN_REQUEST,
   SINGLE_DESIGN_SUCCESS,
+  DELETE_DESIGN_REQUEST,
+  DELETE_DESIGN_SUCCESS,
+  DELETE_DESIGN_FAIL,
 } from "../constants/DesignConstants";
 import axios from "axios";
 
@@ -67,6 +70,25 @@ export const createDesign = (newDesign) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: CREATE_DESIGN_FAIl,
+      payload: error.response.data.message,
+    });
+  }
+};
+
+export const deleteDesign = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: DELETE_DESIGN_REQUEST,
+    });
+    const { data } = await axios.delete(`/api/v1/design/${id}`);
+
+    dispatch({
+      type: DELETE_DESIGN_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: DELETE_DESIGN_FAIL,
       payload: error.response.data.message,
     });
   }

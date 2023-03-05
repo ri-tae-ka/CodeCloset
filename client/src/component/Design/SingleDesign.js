@@ -2,7 +2,11 @@ import React, { Fragment, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./SingleDesign.css";
 import { useParams } from "react-router-dom";
-import { clearErrors, getSingleDesign } from "../../action/designAction";
+import {
+  clearErrors,
+  deleteDesign,
+  getSingleDesign,
+} from "../../action/designAction";
 
 const SingleDesign = () => {
   const dispatch = useDispatch();
@@ -26,6 +30,12 @@ const SingleDesign = () => {
     window.alert("Design Copied to clipboard!");
   };
 
+  const handleDelete = () => {
+    dispatch(deleteDesign(id));
+    window.alert("Your design was successfully deleted!");
+    window.location = "/designs";
+  };
+
   return (
     <Fragment>
       <div className="header-container">
@@ -33,9 +43,14 @@ const SingleDesign = () => {
           <h3>{design.topic}</h3>
           <p>{formattedDate}</p>
         </div>
-        <button onClick={handleCopy} className="copy-button">
-          Copy
-        </button>
+        <div className="copy-dlt-btn">
+          <button onClick={handleCopy} className="copy-button">
+            Copy
+          </button>
+          <button onClick={handleDelete} className="copy-button">
+            Delete
+          </button>
+        </div>
       </div>
       <main>
         <section>
@@ -48,7 +63,7 @@ const SingleDesign = () => {
         </section>
       </main>
       <footer>
-        <p style={{ color: "black" }}>&copy; 2023 Code Closet</p>
+        <p style={{ color: "black" }}>&copy; 2023 CodeCloset</p>
       </footer>
     </Fragment>
   );
